@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 interface FormData {
 	name: string;
@@ -43,38 +42,24 @@ export default function ContactForm() {
 		setIsSubmitting(true);
 		setError(null);
 
-		// EmailJS configuration - Replace these with your actual EmailJS credentials
-		const serviceId =
-			process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
-		const templateId =
-			process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
-		const publicKey =
-			process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
-
 		try {
-			// Initialize EmailJS with your public key
-			emailjs.init(publicKey);
+			// Send email using our API route
+			const response = await fetch("/api/send-email", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					name: formData.name,
+					email: formData.email,
+					phone: formData.phone,
+					address: formData.address,
+					service: formData.service,
+					message: formData.message,
+				}),
+			});
 
-			// Prepare template parameters
-			const templateParams = {
-				to_email: "christian219clean@gmail.com",
-				from_name: formData.name,
-				from_email: formData.email,
-				phone: formData.phone || "Not provided",
-				address: formData.address,
-				service: formData.service,
-				message: formData.message || "No additional details provided",
-				reply_to: formData.email,
-			};
-
-			// Send email using EmailJS
-			const response = await emailjs.send(
-				serviceId,
-				templateId,
-				templateParams
-			);
-
-			if (response.status === 200) {
+			if (response.ok) {
 				setIsSubmitted(true);
 				setFormData({
 					name: "",
@@ -85,7 +70,8 @@ export default function ContactForm() {
 					message: "",
 				});
 			} else {
-				throw new Error("Failed to send email");
+				const errorData = await response.json();
+				throw new Error(errorData.error || "Failed to send email");
 			}
 		} catch (error) {
 			console.error("Form submission error:", error);
