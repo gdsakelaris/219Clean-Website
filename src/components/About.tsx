@@ -26,7 +26,7 @@ export default function About() {
 								</h1>
 								<p className="mt-6 text-xl leading-8 text-gray-700">
 									At 219Clean, we understand that your home is more than just a
-									building; it's a reflection of you.
+									building; it&apos;s a reflection of you.
 								</p>
 							</div>
 						</div>
@@ -39,14 +39,14 @@ export default function About() {
 							</div>
 							<div className="px-6 py-8 text-gray-300">
 								<p className="mb-4">
-									"Whether it's a routine cleaning or a more complex
+									&ldquo;Whether it&apos;s a routine cleaning or a more complex
 									restoration, I approach every task with the same level of
-									professionalism and enthusiasm."
+									professionalism and enthusiasm.&rdquo;
 								</p>
 								<p className="mb-4">
-									"My goal is to provide you with a service that enhances the
-									beauty and functionality of your home, all while offering
-									competitive pricing and timely completion."
+									&ldquo;My goal is to provide you with a service that enhances
+									the beauty and functionality of your home, all while offering
+									competitive pricing and timely completion.&rdquo;
 								</p>
 								<p className="text-primary-400 font-medium">
 									- Christian Nicholson, 219Clean Founder

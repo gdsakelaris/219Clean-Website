@@ -246,7 +246,7 @@ export default function Services() {
 									</p>
 									<div className="mt-8">
 										<h3 className="text-lg font-semibold text-gray-900 mb-4">
-											What's Included:
+											What&apos;s Included:
 										</h3>
 										<ul className="space-y-3">
 											{service.features.map((feature) => (
