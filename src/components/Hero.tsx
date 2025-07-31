@@ -33,23 +33,7 @@ export default function Hero() {
 						</Link>
 					</div>
 
-					{/* Simplified statistics */}
-					<div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-3 max-w-lg mx-auto">
-						<div className="text-center">
-							<div className="text-3xl font-bold text-primary-600">5+</div>
-							<div className="text-sm text-gray-600">Years Experience</div>
-						</div>
-						<div className="text-center">
-							<div className="text-3xl font-bold text-accent-600">100%</div>
-							<div className="text-sm text-gray-600">
-								Satisfaction Guaranteed
-							</div>
-						</div>
-						<div className="text-center">
-							<div className="text-3xl font-bold text-primary-600">24hr</div>
-							<div className="text-sm text-gray-600">Response Time</div>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</div>

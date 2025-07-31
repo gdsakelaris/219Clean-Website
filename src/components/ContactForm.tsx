@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 interface FormData {
 	name: string;
@@ -22,6 +23,7 @@ export default function ContactForm() {
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [error, setError] = useState<string | null>(null);
 
 	const handleChange = (
 		e: React.ChangeEvent<
@@ -30,26 +32,66 @@ export default function ContactForm() {
 	) => {
 		const { name, value } = e.target;
 		setFormData((prev) => ({ ...prev, [name]: value }));
+		// Clear error when user starts typing
+		if (error) {
+			setError(null);
+		}
 	};
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		setIsSubmitting(true);
+		setError(null);
 
-		// Simulate form submission (replace with actual API call)
+		// EmailJS configuration - Replace these with your actual EmailJS credentials
+		const serviceId =
+			process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
+		const templateId =
+			process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
+		const publicKey =
+			process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
+
 		try {
-			await new Promise((resolve) => setTimeout(resolve, 1000));
-			setIsSubmitted(true);
-			setFormData({
-				name: "",
-				email: "",
-				phone: "",
-				address: "",
-				service: "",
-				message: "",
-			});
+			// Initialize EmailJS with your public key
+			emailjs.init(publicKey);
+
+			// Prepare template parameters
+			const templateParams = {
+				to_email: "christian219clean@gmail.com",
+				from_name: formData.name,
+				from_email: formData.email,
+				phone: formData.phone || "Not provided",
+				address: formData.address,
+				service: formData.service,
+				message: formData.message || "No additional details provided",
+				reply_to: formData.email,
+			};
+
+			// Send email using EmailJS
+			const response = await emailjs.send(
+				serviceId,
+				templateId,
+				templateParams
+			);
+
+			if (response.status === 200) {
+				setIsSubmitted(true);
+				setFormData({
+					name: "",
+					email: "",
+					phone: "",
+					address: "",
+					service: "",
+					message: "",
+				});
+			} else {
+				throw new Error("Failed to send email");
+			}
 		} catch (error) {
 			console.error("Form submission error:", error);
+			setError(
+				"Failed to send your request. Please try again or contact us directly at christian219clean@gmail.com"
+			);
 		}
 
 		setIsSubmitting(false);
@@ -79,10 +121,13 @@ export default function ContactForm() {
 					</h3>
 					<p className="mt-2 text-gray-600">
 						Your estimate request has been sent. Christian will contact you
-						within 24 hours.
+						soon.
 					</p>
 					<button
-						onClick={() => setIsSubmitted(false)}
+						onClick={() => {
+							setIsSubmitted(false);
+							setError(null);
+						}}
 						className="mt-4 text-primary-600 hover:text-primary-700 font-medium"
 					>
 						Send Another Request
@@ -97,6 +142,29 @@ export default function ContactForm() {
 			onSubmit={handleSubmit}
 			className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200"
 		>
+			{error && (
+				<div className="mb-6 p-4 rounded-md bg-red-50 border border-red-200">
+					<div className="flex">
+						<div className="flex-shrink-0">
+							<svg
+								className="h-5 w-5 text-red-400"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									fillRule="evenodd"
+									d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+									clipRule="evenodd"
+								/>
+							</svg>
+						</div>
+						<div className="ml-3">
+							<p className="text-sm text-red-800">{error}</p>
+						</div>
+					</div>
+				</div>
+			)}
 			<div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 				<div className="sm:col-span-2">
 					<label

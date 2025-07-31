@@ -35,13 +35,6 @@ const contactInfo = [
 		href: null,
 		icon: MapPinIcon,
 	},
-	{
-		name: "Response Time",
-		description: "Fast, reliable communication",
-		contact: "Within 24 hours",
-		href: null,
-		icon: ClockIcon,
-	},
 ];
 
 export default function Contact() {
@@ -64,32 +57,34 @@ export default function Contact() {
 
 			{/* Contact Info Cards */}
 			<div className="py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+				<div className="mx-auto max-w-4xl px-6 lg:px-8">
+					<div className="grid grid-cols-1 gap-12 sm:grid-cols-3 justify-items-center">
 						{contactInfo.map((item) => (
 							<div
 								key={item.name}
-								className="text-center"
+								className="text-center max-w-xs"
 							>
-								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary-600">
+								<div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary-600">
 									<item.icon
-										className="h-8 w-8 text-white"
+										className="h-10 w-10 text-white"
 										aria-hidden="true"
 									/>
 								</div>
-								<h3 className="mt-6 text-lg font-semibold text-gray-900">
+								<h3 className="mt-8 text-xl font-semibold text-gray-900">
 									{item.name}
 								</h3>
-								<p className="mt-2 text-sm text-gray-600">{item.description}</p>
+								<p className="mt-3 text-base text-gray-600">
+									{item.description}
+								</p>
 								{item.href ? (
 									<a
 										href={item.href}
-										className="mt-2 block text-base font-medium text-primary-600 hover:text-primary-700 transition-colors"
+										className="mt-4 block text-lg font-medium text-primary-600 hover:text-primary-700 transition-colors"
 									>
 										{item.contact}
 									</a>
 								) : (
-									<p className="mt-2 text-base font-medium text-gray-900">
+									<p className="mt-4 text-lg font-medium text-gray-900">
 										{item.contact}
 									</p>
 								)}
@@ -108,9 +103,8 @@ export default function Contact() {
 								Request Your Free Estimate
 							</h2>
 							<p className="mt-4 text-lg leading-8 text-gray-600">
-								Fill out the form below and Christian will get back to you
-								within 24 hours with a detailed estimate for your cleaning
-								needs.
+								Fill out the form below and Christian will get back to you with
+								a detailed estimate for your cleaning needs.
 							</p>
 							<div className="mt-8 space-y-6">
 								<div className="flex gap-x-4">
@@ -132,10 +126,10 @@ export default function Contact() {
 									</div>
 									<div>
 										<h3 className="font-semibold text-gray-900">
-											Fast Response
+											Personal Response
 										</h3>
 										<p className="text-gray-600">
-											Christian responds personally within 24 hours
+											Christian responds personally to every inquiry
 										</p>
 									</div>
 								</div>

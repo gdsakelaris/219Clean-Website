@@ -54,10 +54,8 @@ const reviews = [
 ];
 
 const stats = [
-	{ name: "Customer Satisfaction", value: "100%" },
 	{ name: "Average Rating", value: "5.0★" },
 	{ name: "Repeat Customers", value: "95%" },
-	{ name: "Response Time", value: "<24hrs" },
 ];
 
 function classNames(...classes: string[]) {

@@ -32,12 +32,7 @@ const features = [
 			"Complete insurance coverage for your peace of mind and property protection.",
 		icon: ShieldCheckIcon,
 	},
-	{
-		name: "Quality Guaranteed",
-		description:
-			"100% satisfaction guarantee on all services. Your happiness is our priority.",
-		icon: CheckBadgeIcon,
-	},
+
 	{
 		name: "Community Focused",
 		description:
