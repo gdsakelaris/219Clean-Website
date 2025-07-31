@@ -6,14 +6,16 @@ export async function POST(request: NextRequest) {
 		const body = await request.json();
 		const { name, email, phone, address, service, message } = body;
 
-		// Debug: Check environment variables
-		console.log("Environment variables:", {
-			GMAIL_USER: process.env.GMAIL_USER,
-			GMAIL_APP_PASSWORD: process.env.GMAIL_APP_PASSWORD
-				? "✓ Present"
-				: "✗ Missing",
-			NODE_ENV: process.env.NODE_ENV,
-		});
+		// Debug: Check environment variables (remove in production)
+		if (process.env.NODE_ENV === "development") {
+			console.log("Environment variables:", {
+				GMAIL_USER: process.env.GMAIL_USER,
+				GMAIL_APP_PASSWORD: process.env.GMAIL_APP_PASSWORD
+					? "✓ Present"
+					: "✗ Missing",
+				NODE_ENV: process.env.NODE_ENV,
+			});
+		}
 
 		// Validate required fields
 		if (!name || !email || !address || !service) {
@@ -96,7 +98,7 @@ export async function POST(request: NextRequest) {
 		// Send email
 		await transporter.sendMail({
 			from: `"219Clean Contact Form" <${process.env.GMAIL_USER}>`,
-			to: process.env.GMAIL_USER, // Send to the configured Gmail account for testing
+			to: "gdsakelaris@gmail.com", // Send to Christian's business email
 			replyTo: email,
 			subject: `New Estimate Request from ${name}`,
 			html: emailContent,
