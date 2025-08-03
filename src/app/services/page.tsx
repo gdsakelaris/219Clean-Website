@@ -147,7 +147,6 @@ const services = [
 			"Weed and grass prevention",
 			"Stain resistance improvement",
 			"Extended paver lifespan",
-			"Professional-grade sealers",
 			"Long-lasting results",
 		],
 		process: [
@@ -156,7 +155,6 @@ const services = [
 			"Crack and damage repair",
 			"Application of sealing product",
 			"Even coverage verification",
-			"Curing time management",
 			"Final quality inspection",
 		],
 	},
@@ -213,6 +211,151 @@ export default function Services() {
 							Professional cleaning services with personal attention and
 							guaranteed results. Every job is handled by Christian personally.
 						</p>
+					</div>
+				</div>
+			</div>
+
+			{/* Pricing Overview */}
+			<div className="bg-gray-50 py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							Transparent Pricing
+						</h2>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Fair, competitive pricing with no hidden fees. Every estimate is
+							free and detailed.
+						</p>
+					</div>
+					<div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-3">
+						<div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200">
+							<h3 className="text-xl font-semibold text-gray-900">
+								Gutter and Roof Cleaning
+							</h3>
+							<p className="mt-4 text-gray-600">Comprehensive cleaning packages</p>
+							<ul className="mt-8 space-y-3">
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Free estimate</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Detailed quote</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">No hidden fees</span>
+								</li>
+							</ul>
+						</div>
+						<div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200">
+							<h3 className="text-xl font-semibold text-gray-900">
+								Roof Washing
+							</h3>
+							<p className="mt-4 text-gray-600">Professional roof restoration</p>
+							<ul className="mt-8 space-y-3">
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Free estimate</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Safe methods</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Quality guarantee</span>
+								</li>
+							</ul>
+						</div>
+						<div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200">
+							<h3 className="text-xl font-semibold text-gray-900">
+								Pressure and Soft Washing
+							</h3>
+							<p className="mt-4 text-gray-600">Surface-specific pricing</p>
+							<ul className="mt-8 space-y-3">
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Free estimate</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Multiple surfaces</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Volume discounts</span>
+								</li>
+							</ul>
+						</div>
+						<div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200">
+							<h3 className="text-xl font-semibold text-gray-900">
+								Window Washing
+							</h3>
+							<p className="mt-4 text-gray-600">Clear view guarantee</p>
+							<ul className="mt-8 space-y-3">
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Free estimate</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Interior/exterior</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Streak-free results</span>
+								</li>
+							</ul>
+						</div>
+						<div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200">
+							<h3 className="text-xl font-semibold text-gray-900">
+								Yard Clean Ups
+							</h3>
+							<p className="mt-4 text-gray-600">Seasonal maintenance packages</p>
+							<ul className="mt-8 space-y-3">
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Free estimate</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Debris removal</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Property preparation</span>
+								</li>
+							</ul>
+						</div>
+						<div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200">
+							<h3 className="text-xl font-semibold text-gray-900">
+								Paver Sealing
+							</h3>
+							<p className="mt-4 text-gray-600">Protection and enhancement</p>
+							<ul className="mt-8 space-y-3">
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Free estimate</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Long-lasting results</span>
+								</li>
+								<li className="flex items-center">
+									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
+									<span className="text-sm text-gray-600">Professional products</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div className="mt-16 text-center">
+						<Link
+							href="/contact"
+							className="btn-primary text-lg"
+						>
+							Get Your Free Estimate
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -284,53 +427,6 @@ export default function Services() {
 								</div>
 							</div>
 						))}
-					</div>
-				</div>
-			</div>
-
-			{/* Pricing Section */}
-			<div className="bg-gray-50 py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Transparent Pricing
-						</h2>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							Fair, competitive pricing with no hidden fees. Every estimate is
-							free and detailed.
-						</p>
-					</div>
-					<div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-3">
-						{pricing.map((item) => (
-							<div
-								key={item.service}
-								className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-200"
-							>
-								<h3 className="text-xl font-semibold text-gray-900">
-									{item.service}
-								</h3>
-								<p className="mt-4 text-gray-600">{item.description}</p>
-								<ul className="mt-8 space-y-3">
-									{item.features.map((feature) => (
-										<li
-											key={feature}
-											className="flex items-center"
-										>
-											<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
-											<span className="text-sm text-gray-600">{feature}</span>
-										</li>
-									))}
-								</ul>
-							</div>
-						))}
-					</div>
-					<div className="mt-16 text-center">
-						<Link
-							href="/contact"
-							className="btn-primary text-lg"
-						>
-							Get Your Free Estimate
-						</Link>
 					</div>
 				</div>
 			</div>
