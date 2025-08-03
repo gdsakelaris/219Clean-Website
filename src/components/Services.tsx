@@ -12,22 +12,22 @@ const services = [
 	{
 		name: "Gutter and Roof Cleaning",
 		description:
-			"Complete gutter and roof cleaning services to remove dirt, algae, moss, and debris. Protects your home and extends roof life.",
+			"Complete gutter and roof cleaning services to remove leaves, branches, and other debris. Protects your home and extends roof life.",
 		icon: HomeIcon,
 		features: [
-			"Soft wash technique",
-			"Eco-friendly solutions",
+			"Hand scoop and bag debris",
 			"Full gutter system cleaning",
+			"Ensure proper gutter draining",
 			"Before/after photos",
 		],
 	},
 	{
 		name: "Roof Washing",
 		description:
-			"Specialized roof washing services using gentle, effective methods to safely clean and restore your roof.",
+			"Specialized roof washing services using gentle, effective methods to safely remove dirt, algae, and moss from your roof.",
 		icon: WrenchScrewdriverIcon,
 		features: [
-			"Safe cleaning methods",
+			"Soft wash technique",
 			"Algae and moss removal",
 			"No damage guarantee",
 			"Professional equipment",

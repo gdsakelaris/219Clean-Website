@@ -1,5 +1,4 @@
 import {
-	ShieldCheckIcon,
 	UserIcon,
 	CurrencyDollarIcon,
 	ClockIcon,
@@ -26,13 +25,6 @@ const features = [
 			"Reliable scheduling and prompt completion of all cleaning projects.",
 		icon: ClockIcon,
 	},
-	{
-		name: "Fully Insured",
-		description:
-			"Complete insurance coverage for your peace of mind and property protection.",
-		icon: ShieldCheckIcon,
-	},
-
 	{
 		name: "Community Focused",
 		description:
