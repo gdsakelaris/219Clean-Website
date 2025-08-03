@@ -56,6 +56,7 @@ const reviews = [
 const stats = [
 	{ name: "Average Rating", value: "5.0★" },
 	{ name: "Repeat Customers", value: "95%" },
+	{ name: "Customer Satisfaction", value: "100%" },
 ];
 
 function classNames(...classes: string[]) {
@@ -84,7 +85,7 @@ export default function Reviews() {
 			{/* Stats Section */}
 			<div className="bg-white py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+					<dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
 						{stats.map((stat) => (
 							<div
 								key={stat.name}
