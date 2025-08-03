@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
 		const transporter = nodemailer.createTransport({
 			service: "gmail",
 			auth: {
-				user: process.env.GMAIL_USER, // gdsakelaris@gmail.com
+				user: process.env.GMAIL_USER, // christian219clean@gmail.com
 				pass: process.env.GMAIL_APP_PASSWORD, // Gmail App Password
 			},
 		});
@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
 		// Send email
 		await transporter.sendMail({
 			from: `"219Clean Contact Form" <${process.env.GMAIL_USER}>`,
-			to: "gdsakelaris@gmail.com", // Send to Christian's business email
+			to: "christian219clean@gmail.com", // Send to Christian's business email
 			replyTo: email,
 			subject: `New Estimate Request from ${name}`,
 			html: emailContent,
