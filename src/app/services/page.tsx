@@ -232,7 +232,9 @@ export default function Services() {
 							<h3 className="text-xl font-semibold text-gray-900">
 								Gutter and Roof Cleaning
 							</h3>
-							<p className="mt-4 text-gray-600">Comprehensive cleaning packages</p>
+							<p className="mt-4 text-gray-600">
+								Comprehensive cleaning packages
+							</p>
 							<ul className="mt-8 space-y-3">
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
@@ -252,7 +254,9 @@ export default function Services() {
 							<h3 className="text-xl font-semibold text-gray-900">
 								Roof Washing
 							</h3>
-							<p className="mt-4 text-gray-600">Professional roof restoration</p>
+							<p className="mt-4 text-gray-600">
+								Professional roof restoration
+							</p>
 							<ul className="mt-8 space-y-3">
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
@@ -264,7 +268,9 @@ export default function Services() {
 								</li>
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
-									<span className="text-sm text-gray-600">Quality guarantee</span>
+									<span className="text-sm text-gray-600">
+										Quality guarantee
+									</span>
 								</li>
 							</ul>
 						</div>
@@ -280,11 +286,15 @@ export default function Services() {
 								</li>
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
-									<span className="text-sm text-gray-600">Multiple surfaces</span>
+									<span className="text-sm text-gray-600">
+										Multiple surfaces
+									</span>
 								</li>
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
-									<span className="text-sm text-gray-600">Volume discounts</span>
+									<span className="text-sm text-gray-600">
+										Volume discounts
+									</span>
 								</li>
 							</ul>
 						</div>
@@ -300,11 +310,15 @@ export default function Services() {
 								</li>
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
-									<span className="text-sm text-gray-600">Interior/exterior</span>
+									<span className="text-sm text-gray-600">
+										Interior/exterior
+									</span>
 								</li>
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
-									<span className="text-sm text-gray-600">Streak-free results</span>
+									<span className="text-sm text-gray-600">
+										Streak-free results
+									</span>
 								</li>
 							</ul>
 						</div>
@@ -312,7 +326,9 @@ export default function Services() {
 							<h3 className="text-xl font-semibold text-gray-900">
 								Yard Clean Ups
 							</h3>
-							<p className="mt-4 text-gray-600">Seasonal maintenance packages</p>
+							<p className="mt-4 text-gray-600">
+								Seasonal maintenance packages
+							</p>
 							<ul className="mt-8 space-y-3">
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
@@ -324,7 +340,9 @@ export default function Services() {
 								</li>
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
-									<span className="text-sm text-gray-600">Property preparation</span>
+									<span className="text-sm text-gray-600">
+										Property preparation
+									</span>
 								</li>
 							</ul>
 						</div>
@@ -340,11 +358,15 @@ export default function Services() {
 								</li>
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
-									<span className="text-sm text-gray-600">Long-lasting results</span>
+									<span className="text-sm text-gray-600">
+										Long-lasting results
+									</span>
 								</li>
 								<li className="flex items-center">
 									<CheckCircleIcon className="h-5 w-5 text-accent-500 mr-3" />
-									<span className="text-sm text-gray-600">Professional products</span>
+									<span className="text-sm text-gray-600">
+										Professional products
+									</span>
 								</li>
 							</ul>
 						</div>

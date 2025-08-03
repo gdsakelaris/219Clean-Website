@@ -26,7 +26,7 @@ export default function Header() {
 						className="-m-1.5 p-1.5"
 					>
 						<span className="text-2xl font-bold text-primary-600">
-							219Clean
+							219 Clean LLC
 						</span>
 					</Link>
 				</div>
